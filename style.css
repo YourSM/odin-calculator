@@ -9,6 +9,7 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
+  background-color: rgb(121, 150, 177);
 }
 .verticalContainer {
   display: flex;
