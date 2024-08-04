@@ -10,15 +10,64 @@ body {
   height: 100%;
   width: 100%;
 }
-.container {
+.verticalContainer {
   display: flex;
   border: 5px lightblue solid;
+  flex-direction: column;
+  gap: 10px;
+  background-color: gray;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .display {
   border: 5px wheat solid;
   font-size: 100px;
-  width: 500px;
+  width: 400px;
   height: 100px;
+  background-color: cadetblue;
+  border-radius: 10px;
+}
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.horizontalButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 80px;
+  height: 80px;
+  background-color:lightblue;
+  font-size: 50px;
+  color: black;
+  border-radius: 10px;
+}
+
+.longButton {
+  width: 170px;
+}
+
+.operator {
+  background-color: pink;
+}
+
+.verticalButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.clearButton {
+  background-color: wheat;
 }
