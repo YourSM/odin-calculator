@@ -22,12 +22,14 @@ body {
 }
 
 .display {
+  display: flex;
   border: 5px wheat solid;
   font-size: 100px;
   width: 400px;
   height: 100px;
   background-color: cadetblue;
   border-radius: 10px;
+  justify-content: right;
 }
 
 .buttons {
