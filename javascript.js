@@ -2,6 +2,16 @@ let numOne = 0;
 let numTwo = 0;
 let operator = 0;
 
+const display = document.querySelector("#display");
+const buttons = document.querySelectorAll("button")
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    let target = event.target.textContent
+    display.append(target);
+  })
+})
+
 function add(numOne, numTwo) {
   return numOne + numTwo;
 }

@@ -21,7 +21,7 @@ body {
   border-radius: 10px;
 }
 
-.display {
+#display {
   display: flex;
   border: 5px wheat solid;
   font-size: 100px;
@@ -32,7 +32,7 @@ body {
   justify-content: right;
 }
 
-.buttons {
+#buttons {
   display: flex;
   flex-direction: column;
   gap: 10px;
