@@ -72,6 +72,6 @@ button {
   flex-direction: column;
 }
 
-.clearButton {
+#clearButton {
   background-color: wheat;
 }

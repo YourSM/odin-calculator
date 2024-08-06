@@ -33,12 +33,14 @@ operators.forEach((operator) => {
     let target = event.target.textContent;
 
     if (target === "=") {
-      let result = operate(+numOne, operatorSymbol, +numTwo).toFixed(2)
-      display.textContent = result
+      let result = operate(+numOne, operatorSymbol, +numTwo)
+
       if (result === "Nuh-uh") {
+        display.textContent = result
         return numOne = 0, numTwo = 0;
       }
-      return numOne = result, numTwo = 0;
+      display.textContent = result.toFixed(2)
+      return numOne = result.toFixed(2), numTwo = 0;
     } else if (operatorSymbol !== 0 && numTwo !== 0) {
       let result = operate(+numOne, operatorSymbol, +numTwo)
 
