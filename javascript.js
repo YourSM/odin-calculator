@@ -58,10 +58,7 @@ function multiply(numOne, numTwo) {
 }
 
 function divide(numOne, numTwo) {
-  if (numTwo === 0) {
-    return "Nuh-uh"
-  }
-  return numOne / numTwo;
+  return numTwo === 0 ? "Nuh-uh" : numOne / numTwo;
 }
 
 function operate(numOne, operatorSymbol, numTwo) {
