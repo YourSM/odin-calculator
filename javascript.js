@@ -9,13 +9,14 @@ const clear = document.querySelector("#clearButton")
 
 clear.addEventListener("click", () => {
   display.textContent = "";
+  return numTwo = 0, numOne = 0, operatorSymbol = 0;
 })
 
 numbers.forEach((number) => {
   number.addEventListener("click", (event) => {
     let target = event.target.textContent
     display.append(target);
-    return operatorSymbol === 0 ? numOne = +target : numTwo = +target
+    return operatorSymbol === 0 ? numOne +=target : numTwo += target
   })
 })
 
@@ -23,9 +24,9 @@ operators.forEach((operator) => {
   operator.addEventListener("click", (event) => {
     let target = event.target.textContent;
     if (target === "=") {
-      let result = (operate(numOne, operatorSymbol, numTwo))
+      let result = (operate(+numOne, operatorSymbol, +numTwo))
       display.textContent = result
-      return numOne = result
+      return numOne = result, numTwo = 0;
     } else {
       display.append(target);
       return operatorSymbol = target;
