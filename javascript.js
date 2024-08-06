@@ -6,9 +6,11 @@ const display = document.querySelector("#display");
 const numbers = document.querySelectorAll(".number")
 const operators = document.querySelectorAll(".operator")
 const clear = document.querySelector("#clearButton")
+const decimal = document.querySelector("#decimal")
 
 clear.addEventListener("click", () => {
   display.textContent = "";
+  decimal.disabled = false;
   return numTwo = 0, numOne = 0, operatorSymbol = 0;
 })
 
@@ -16,6 +18,9 @@ numbers.forEach((number) => {
   number.addEventListener("click", (event) => {
     let target = event.target.textContent
     display.append(target);
+    if (target === ".") {
+      decimal.disabled = true
+    }
     return operatorSymbol === 0 ? numOne +=target : numTwo += target
   })
 })
@@ -32,6 +37,7 @@ operators.forEach((operator) => {
       return numOne = result, numTwo = 0;
     } else {
       display.append(target);
+      decimal.disabled = false;
       return operatorSymbol = target;
     }
     })
