@@ -38,7 +38,7 @@ operators.forEach((operator) => {
       if (result === "Nuh-uh") {
         return numOne = 0, numTwo = 0;
       }
-      return numOne = result, numTwo = 0;
+      return numOne = Math.round(result), numTwo = 0;
     } else if (operatorSymbol !== 0 && numTwo !== 0) {
       let result = operate(+numOne, operatorSymbol, +numTwo)
 
