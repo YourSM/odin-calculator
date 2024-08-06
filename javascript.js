@@ -5,6 +5,11 @@ let operatorSymbol = 0;
 const display = document.querySelector("#display");
 const numbers = document.querySelectorAll(".number")
 const operators = document.querySelectorAll(".operator")
+const clear = document.querySelector("#clearButton")
+
+clear.addEventListener("click", () => {
+  display.textContent = "";
+})
 
 numbers.forEach((number) => {
   number.addEventListener("click", (event) => {
