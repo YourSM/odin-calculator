@@ -26,6 +26,9 @@ operators.forEach((operator) => {
     if (target === "=") {
       let result = (operate(+numOne, operatorSymbol, +numTwo))
       display.textContent = result
+      if (result === "Nuh-uh") {
+        return numOne = 0, numTwo = 0;
+      }
       return numOne = result, numTwo = 0;
     } else {
       display.append(target);
@@ -47,6 +50,9 @@ function multiply(numOne, numTwo) {
 }
 
 function divide(numOne, numTwo) {
+  if (numTwo === 0) {
+    return "Nuh-uh"
+  }
   return numOne / numTwo;
 }
 
