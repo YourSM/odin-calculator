@@ -90,6 +90,5 @@ function operate(numOne, operatorSymbol, numTwo) {
   } else if (operatorSymbol === "%") {
     return toDecimal(numOne, numTwo);
   } else if (operatorSymbol === "+/-") {
-    r
   }
 }
