@@ -2,13 +2,14 @@ let numOne = 0;
 let numTwo = 0;
 let operatorSymbol = 0;
 
-
 const display = document.querySelector("#display");
 const numbers = document.querySelectorAll(".number")
 const operators = document.querySelectorAll(".operator")
 const clear = document.querySelector("#clearButton")
 const decimal = document.querySelector("#decimal")
+
 display.textContent = numOne
+
 clear.addEventListener("click", () => {
   decimal.disabled = false;
   return numTwo = 0, numOne = 0, operatorSymbol = 0, display.textContent = numOne;
@@ -30,16 +31,25 @@ numbers.forEach((number) => {
 operators.forEach((operator) => {
   operator.addEventListener("click", (event) => {
     let target = event.target.textContent;
+
     if (target === "=") {
-      let result = (operate(+numOne, operatorSymbol, +numTwo))
+      let result = operate(+numOne, operatorSymbol, +numTwo)
       display.textContent = result
       if (result === "Nuh-uh") {
         return numOne = 0, numTwo = 0;
-      }
+      } 
+      return numOne = result, numTwo = 0;
+    } else if (operatorSymbol !== 0 && numTwo !== 0) {
+      let result = operate(+numOne, operatorSymbol, +numTwo)
+
+      display.textContent = result
+      display.append(target);
+
       return numOne = result, numTwo = 0;
     } else {
       display.append(target);
       decimal.disabled = false;
+      
       return operatorSymbol = target;
     }
     })
