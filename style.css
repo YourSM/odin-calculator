@@ -30,6 +30,7 @@ body {
   background-color: cadetblue;
   border-radius: 10px;
   justify-content: right;
+  overflow: hidden;
 }
 
 #buttons {
