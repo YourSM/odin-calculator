@@ -2,16 +2,16 @@ let numOne = 0;
 let numTwo = 0;
 let operatorSymbol = 0;
 
+
 const display = document.querySelector("#display");
 const numbers = document.querySelectorAll(".number")
 const operators = document.querySelectorAll(".operator")
 const clear = document.querySelector("#clearButton")
 const decimal = document.querySelector("#decimal")
-
+display.textContent = numOne
 clear.addEventListener("click", () => {
-  display.textContent = "";
   decimal.disabled = false;
-  return numTwo = 0, numOne = 0, operatorSymbol = 0;
+  return numTwo = 0, numOne = 0, operatorSymbol = 0, display.textContent = numOne;
 })
 
 numbers.forEach((number) => {
@@ -20,6 +20,8 @@ numbers.forEach((number) => {
     display.append(target);
     if (target === ".") {
       decimal.disabled = true
+    } else if (numOne === 0) {
+      display.textContent = target
     }
     return operatorSymbol === 0 ? numOne +=target : numTwo += target
   })
