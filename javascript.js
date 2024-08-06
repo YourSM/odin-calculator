@@ -8,7 +8,7 @@ const operators = document.querySelectorAll(".operator")
 const clear = document.querySelector("#clearButton")
 const decimal = document.querySelector("#decimal")
 
-display.textContent = numOne;
+display.textContent = numOne
 
 clear.addEventListener("click", () => {
   decimal.disabled = false;
@@ -17,14 +17,14 @@ clear.addEventListener("click", () => {
 
 numbers.forEach((number) => {
   number.addEventListener("click", (event) => {
-    let target = event.target.textContent;
+    let target = event.target.textContent
     display.append(target);
     if (target === ".") {
-      decimal.disabled = true;
+      decimal.disabled = true
     } else if (numOne === 0) {
-      display.textContent = target;
+      display.textContent = target
     }
-    return operatorSymbol === 0 ? numOne +=target : numTwo += target;
+    return operatorSymbol === 0 ? numOne +=target : numTwo += target
   })
 })
 
@@ -36,15 +36,15 @@ operators.forEach((operator) => {
       let result = operate(+numOne, operatorSymbol, +numTwo)
 
       if (result === "Nuh-uh") {
-        display.textContent = result;
+        display.textContent = result
         return numOne = 0, numTwo = 0;
       }
-      display.textContent = result.toFixed(2);
+      display.textContent = result.toFixed(2)
       return numOne = result.toFixed(2), numTwo = 0;
     } else if (operatorSymbol !== 0 && numTwo !== 0) {
-      let result = operate(+numOne, operatorSymbol, +numTwo);
+      let result = operate(+numOne, operatorSymbol, +numTwo)
 
-      display.textContent = result;
+      display.textContent = result
       display.append(target);
 
       return numOne = result, numTwo = 0;
@@ -90,5 +90,6 @@ function operate(numOne, operatorSymbol, numTwo) {
   } else if (operatorSymbol === "%") {
     return toDecimal(numOne, numTwo);
   } else if (operatorSymbol === "+/-") {
+    r
   }
 }
