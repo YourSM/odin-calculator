@@ -37,7 +37,7 @@ operators.forEach((operator) => {
       display.textContent = result
       if (result === "Nuh-uh") {
         return numOne = 0, numTwo = 0;
-      } 
+      }
       return numOne = result, numTwo = 0;
     } else if (operatorSymbol !== 0 && numTwo !== 0) {
       let result = operate(+numOne, operatorSymbol, +numTwo)
@@ -46,7 +46,8 @@ operators.forEach((operator) => {
       display.append(target);
 
       return numOne = result, numTwo = 0;
-    } else {
+    }
+     else {
       display.append(target);
       decimal.disabled = false;
       
@@ -71,14 +72,22 @@ function divide(numOne, numTwo) {
   return numTwo === 0 ? "Nuh-uh" : numOne / numTwo;
 }
 
+function toDecimal(numOne) {
+  return numOne / 100;
+}
+
 function operate(numOne, operatorSymbol, numTwo) {
   if (operatorSymbol === "+") {
-    return add(numOne, numTwo)
+    return add(numOne, numTwo);
   } else if (operatorSymbol === "-") {
-    return subtract(numOne, numTwo)
+    return subtract(numOne, numTwo);
   } else if (operatorSymbol === "*") {
     return multiply(numOne, numTwo);
   } else if (operatorSymbol === "/") {
-    return divide(numOne, numTwo)
+    return divide(numOne, numTwo);
+  } else if (operatorSymbol === "%") {
+    return toDecimal(numOne, numTwo);
+  } else if (operatorSymbol === "+/-") {
+    r
   }
 }
