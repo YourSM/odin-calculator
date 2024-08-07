@@ -47,7 +47,10 @@ operators.forEach((operator) => {
       display.textContent = result
       display.append(target);
 
-      return numOne = result, numTwo = 0;
+      return numOne =
+      result,
+      numTwo = 0,
+      operatorSymbol = target;
     }
      else {
       display.append(target);
@@ -89,6 +92,5 @@ function operate(numOne, operatorSymbol, numTwo) {
     return divide(numOne, numTwo);
   } else if (operatorSymbol === "%") {
     return toDecimal(numOne, numTwo);
-  } else if (operatorSymbol === "+/-") {
   }
 }
