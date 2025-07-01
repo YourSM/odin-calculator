@@ -2,6 +2,10 @@
 This is a project for the Odin Project Curriculum
 where I created a functioning calculator!
 
+**Link to project:** https://yoursm.github.io/odin-calculator/
+
+![Image of Website](./calculator.png)
+
 The calculator has the usual options a real one
 and is designed with a pastel theme.
 
